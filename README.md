@@ -64,4 +64,4 @@ All code in this repository is available under the [MIT License](https://opensou
 
 ## Feedback / Questions?
 
-Contact YOUR NAME HERE at natalia.sanchezloayza37@journalism.cuny.edu.
+Contact Natalia Sanchez Loayza at natalia.sanchezloayza37@journalism.cuny.edu.
