@@ -22,23 +22,34 @@ The spreadsheet contains, among others, the following columns relevant to the an
 The notebook [`analysis 1-natalia.ipynb`](notebooks/analysis 1-natalia.ipynb) performs the following analyses:
 
 ##### Part 1: Unique number of recipients
-
+- Load libraries and data
 - Select the column `to` and use the value_counts() function to get a list of the the unique emails addresses and the number of times those addresses received the alerts
  - Create a new dataFrame called 'unique_count' to contain the previous list and export the new dataFrame as a csv file
 
 
 ##### Part 2: Tallies over time
 
-- Description of what you did with the data
+- Load libraries and data, parsing the date column
+- Select the "date" column and convert it to utc (coordinated universal time)
+- Create a new dataFrame with this information and reset the index to be the 'date'
+- Resample the date by month
+- Create a new dataFrame called 'brookhaven_resampling' to contain the data and export the new dataFrame as a csv file
 
-##### Part 2: Tallies of the body_text column values containing “package” and “car”
 
-- Description of what you did with the data
+##### Part 3: Tallies of the body_text column values containing “package” and “car”
 
+- Load libraries and data
+- Create a new column 'package_car' and use the lambda function to select any messages that contain 'package' or 'car' in the 'body_title" column. All messages containing either of these words will appear in the new column 'package_car' as a True or False statement.
+- Use the value_counts() function on this new column
+Create a new dataFrame called 'brookhaven_car_package' to contain the data and export the new dataFrame as a csv file
 
 ## Outputs
 
-The notebooks output this spreadsheet which contains TKTK: [`output/tktktk.csv`](output/tktktk.csv).
+The notebooks output this spreadsheet which contains 3 csv files:
+
+[`output/car_package-Sanchez.csv`](output/car_package-Sanchez.csv)
+[`output/unique_count-Sanchez.csv`](output/unique_count-Sanchez.csv)
+[`output/resampling-Sanchez.csv`](output/resampling-Sanchez.csv)
 
 ## Running the analysis yourself
 
@@ -53,4 +64,4 @@ All code in this repository is available under the [MIT License](https://opensou
 
 ## Feedback / Questions?
 
-Contact YOUR NAME HERE at your.name@email.com.
+Contact YOUR NAME HERE at natalia.sanchezloayza37œjournalism.cuny.edu.
