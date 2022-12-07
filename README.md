@@ -1,31 +1,37 @@
-# Analysis of TK data set — MM/YYYY to MM/YYYY
+# Analysis of Brookhaven Police Department Neighbors App Data Set — 01/2021 to 05/2022
 
 This repository contains data, analytic code, and findings that support portions of the article, “[TKTKTKTK](https://www.google.com),” published Month Date, Year. Please read that article, which contains important context and details, before proceeding.
 
 ## Data
 
-This analysis uses TKTKTK spreadsheets.
+This analysis uses 1 spreadsheet.
 
 The spreadsheets come from the following sources:
 
 - Name of source:
-  - `name_of_spreadsheet.xlsx`: Raw data of TKTKTK
+  - `msg_extracts.csv`: Raw data of all of the emails alerts that Brookhaven Police Department received from the Neighbors App from January 2021 to May 2022
 
-Each of the spreadsheets contain, among others, the following columns relevant to the analysis:
+The spreadsheet contains, among others, the following columns relevant to the analysis:
 
-- `tktktk` — TK description
-- `tktktk` — TK description
+- `to` — email addresses of the Brookhaven police officers that received the alarms
+- `date` — date alerts were received
+- `body_title` — short description of the content of the alert
 
 ## Methodology
 
-The notebook [`tktktktk.ipynb`](notebooks/tktktktk.ipynb) performs the following analyses:
+The notebook [`analysis 1-natalia.ipynb`](notebooks/analysis 1-natalia.ipynb) performs the following analyses:
 
-##### Part 1: TKTK
+##### Part 1: Unique number of recipients
+
+- Select the column `to` and use the value_counts() function to get a list of the the unique emails addresses and the number of times those addresses received the alerts
+ - Create a new dataFrame called 'unique_count' to contain the previous list and export the new dataFrame as a csv file
+
+
+##### Part 2: Tallies over time
 
 - Description of what you did with the data
 
-
-##### Part 2: TKTK
+##### Part 2: Tallies of the body_text column values containing “package” and “car”
 
 - Description of what you did with the data
 
